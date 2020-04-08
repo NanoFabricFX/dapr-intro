@@ -1,13 +1,13 @@
 # Dapr
 
-## Microservices Architecture
+## Why Dapr?
+
+### Microservices Architecture
 
 - Scale services independently
 - State and stefull functions and actors
 - Decoupled event driven services (pub/sub)
 - Distributed Tracing
-
-## Why Dapr?
 
 ### Features:
 
