@@ -37,6 +37,8 @@ Co-locate a cohesive set of tasks with the primary application, but place them i
 <div align="center">
 <image src="sidecard.png" style="width:90%">
 </div>
+  
+> Note: More inforamtion at: https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar
 
 ## Installation
 
