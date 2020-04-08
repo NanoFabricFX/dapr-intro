@@ -27,7 +27,7 @@
 Co-locate a cohesive set of tasks with the primary application, but place them inside their own process or container, providing a homogeneous interface for platform services across languages.
 
 <div align="center">
-<image src="images/sidecard.png" style="width:90%">
+<image src="sidecard.png" style="width:90%">
 </div>
 
 ## Installation
@@ -79,7 +79,7 @@ kubectl get pods -n dapr-system -o wide
 Pods:
 
 <div align="center">
-<image src="images/dapr-pods.png" style="width:90%">
+<image src="dapr-pods.png" style="width:90%">
 </div>
 
 ### Or, Install Dapr using CLI
