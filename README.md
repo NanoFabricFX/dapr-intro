@@ -2,9 +2,9 @@
 
 ## Microservices Architecture
 
-- Independent scalability
+- Scale services independently
 - State and stefull functions and actors
-- Decoupled event driven services
+- Decoupled event driven services (pub/sub)
 - Distributed Tracing
 
 ## Why Dapr?
