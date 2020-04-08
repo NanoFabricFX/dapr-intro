@@ -1,5 +1,12 @@
 # Dapr
 
+## Microservices Architecture
+
+- Independent scalability
+- State and stefull functions and actors
+- Decoupled event driven services
+- Distributed Tracing
+
 ## Why Dapr?
 
 ### Features:
@@ -7,9 +14,10 @@
 - Any language, any framework, anywhere
 - Microservice building blocks for cloud and edge
 - Sidecar architecture
-- Developer language SDKs and frameworks
+- Developer language SDKs and frameworks (or just use REST)
 - Running Dapr on a local developer machine in self hosted mode
 - Running Dapr in Kubernetes mode
+
 
 ### Building Blocks
 
