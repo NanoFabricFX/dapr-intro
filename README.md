@@ -53,6 +53,10 @@ sudo dapr init
 ## There are installers for Windows and MacOS
 ```
 
+### After Initialization
+
+- Dapr containers are added to docker
+
 ## Deployment to Kubernetes
 
 ### Minikube & Docker
