@@ -2,6 +2,8 @@
 
 ## Why Dapr?
 
+a platform and language agnostic runtime for microservices and cloud native applications.
+
 ### Microservices Architecture
 
 - Loosely coupled for autonomy and idependent scaling
