@@ -115,8 +115,8 @@ dapr run --app-id pythonapp python3 app.py
 ```
 ### How does it work
 
-- The node app can get/persist state to the dapr state service
-- The pythong posts a new value app via service invokation and not directly to the service
+- The node app can get/save state to the dapr state service using the Dapr state store
+- The pythong posts a new value app via service invokation to the node app and not directly to the service. The new value is saved to the state store.
 
 ### 2.Hello-Kubernetes
 
@@ -162,6 +162,7 @@ spec:
   - name: redisPassword
     value: <--REDIS PASSWORD-->
 ```
+- The Dapr sidecars are addid via YAML annotations in the different services
 - Python application, using service invocation, makes a POST requests to the node application using the dapr sidecar. It updates the order id every second.
 - During the a POST request, the Node application saves the state to the Redis cache. Making a GET request to /order gets the latest order from Redis.
   - > Note: There's no additional code needed to read/write to/from the Redis cache other than to get/post using the sidecard.
