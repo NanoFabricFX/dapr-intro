@@ -4,12 +4,13 @@
 
 ### Microservices Architecture
 
-- Scale services independently
+- Loosely coupled for autonomy and idependent scaling
 - State and stefull functions and actors
-- Decoupled event driven services (pub/sub)
+- Service discovery
+- Polyglot - each service may be implemented in the most appropriate language, framework, runtime
 - Distributed Tracing
 
-### Features:
+### Dapr Features
 
 - Any language, any framework, anywhere
 - Microservice building blocks for cloud and edge
@@ -17,7 +18,6 @@
 - Developer language SDKs and frameworks (or just use REST)
 - Running Dapr on a local developer machine in self hosted mode
 - Running Dapr in Kubernetes mode
-
 
 ### Building Blocks
 
@@ -102,6 +102,18 @@ dapr install --kubernetes
 
 ## Review the Dapr Samples
 
+### 1.Hello-world (Docker)
+
+```bash
+dapr run --app-id nodeapp --app-port 3000 --port 3500 node app.js
+
+dapr run --app-id pythonapp python3 app.py
+```
+### How does it work
+
+- The node app can get/persist state to the dapr state service
+- The pythong posts a new value app via service invokation and not directly to the service
+
 ### 2.Hello-Kubernetes
 
 
@@ -130,7 +142,7 @@ kubectl port-forward svc/nodeapp 8080:80
 # Open http://localhost:8080/order
 ```
 
-#### How it works
+#### How does it work?
 
 - the redis.yaml creates the dapr state store using redis. Other options include Cosmos DB, SQL, etc.
 ```bash
@@ -174,5 +186,3 @@ kubectl port-forward svc/calculator-front-end 8080:80
 
 # open http://localhost:8080
 ```
-
-## Debugging
