@@ -115,11 +115,11 @@ dapr run --app-id pythonapp python3 app.py
 ```
 ### How does it work
 
-- The node app can get/save state to the dapr state service using the Dapr state store
-- The pythong posts a new value app via service invokation to the node app and not directly to the service. The new value is saved to the state store.
+- The node app gets/saves the state using the Dapr state store
+- The pythong posts a new value every second app via service invokation to the node app and not directly to the service. The nodeapp saves the new value in the Dap state store.
+- Good for development. There's a VS code extension debug into the code.
 
 ### 2.Hello-Kubernetes
-
 
 ```bash
 cd samples\2.Hello-Kubernetes\deploy
