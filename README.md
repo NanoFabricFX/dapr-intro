@@ -193,3 +193,59 @@ kubectl port-forward svc/calculator-front-end 8080:80
 
 # open http://localhost:8080
 ```
+## Debugging
+
+### VS Code extension
+
+### VS launch.json and tasks.json
+
+- launch.json
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dapr Python: app.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Dapr Node: app.js",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/app.js",
+            "preLaunchTask": "daprd-debug",
+            "postDebugTask": "daprd-down"
+        }
+    ]
+}
+```
+- tasks.json
+
+```tasks.json
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"appId": "nodeapp",
+			"appPort": 3000,
+			"label": "daprd-debug",
+			"type": "daprd"
+		},
+		{
+			"appId": "nodeapp",
+			"label": "daprd-down",
+			"type": "daprd-down"
+		}
+	]
+}
+```
