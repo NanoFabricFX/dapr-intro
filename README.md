@@ -1,4 +1,4 @@
-# Dapr
+# Dapr (Distributed Application Runtime)
 
 ## Why Dapr?
 
